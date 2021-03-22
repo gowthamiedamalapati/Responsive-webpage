@@ -1,0 +1,225 @@
+<!DOCTYPE html5>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment</title>
+        <link rel="stylesheet" href="responsiveWebpage.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://kit.fontawesome.com/4a3c808279.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row no-gutter">
+                <div class="col-md-1 first">
+                    <div class="nav">
+                        <div class="part1">
+                        <a href="#"><i class="fas fa-dove"></i></a>
+                        <a href="#"><i class="fa fa-search"></i></a>
+                        </div>
+                        <div class="part2">
+                        <a href="#" class="active"><i class="fa fa-home"></i></a>
+                        <a href="#"><i class="far fa-newspaper"></i></a>
+                        <a href="#"><i class="far fa-list-alt"></i></a>
+                        <a href="#"><i class="far fa-user"></i></a>
+                        </div> 
+                        <div class="part3 ">
+                        <a href="#"><i class="far fa-bell"></i></a>
+                        <a href="#"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3 middle">
+                    <div class="intro">
+                        <img src="boydp.jpg" alt="mike" width="68px" height="65px">  
+                        <h3>Hi Mike,</h3>
+                        <p>welcome back</p>
+                        <a  class="notification" href="#"><i class="far fa-bell"></i></a>
+                    </div>
+                    <div class="info">
+                        <h5>Today</h5>
+                        <h3>$19,892</h3>
+                        <p>Account Balance</p>
+                        <div id="disc">
+                        <div>
+                        <h5>$4,000</h5>
+                        <p>Year-to-Date Contributions</p>
+                        </div>
+                        <div><h5>$1,892</h5>
+                        <p>Total Interest</p></div>
+                        </div>
+                        <button>I want to <i class="fas fa-caret-down"></i></button>
+                    </div>
+                    <div class="bank-info">
+                        <h5>Recent Transactions</h5>
+                        <h6>2020-08-07</h6> 
+                        <p>Withdrawal Transfer to Bank-XXX11</p>
+                        <span></span>
+                        <h6>2020-08-07</h6> 
+                        <p>Withdrawal Transfer to Bank-XXX11</p>
+                        <span></span>
+                        <h6>2020-08-07</h6> 
+                        <p>Withdrawal Transfer to Bank-XXX11</p>
+                        <span></span>
+                    </div>
+                </div>
+                 <div class="col-xs-12 col-md-8 last">
+                    <div class="income">
+                        <p>Retirement Income</p>
+                        <h4>Starting Year 2056</h4>
+                        <div class="goals">
+                        <div id="mygoal"><h4>$300,000</h4><p>My Goal</p><span></span></div>
+                        <div id="achievement">
+                        <div><h4>59%</h4><p>Goal Achieved</p><span></span></div>    
+                        <div ><h4>$300</h4><p>Est. Monthly Income</p><span></span></div>
+                        </div>    
+                        </div>
+                        <div class="graph">
+                            <h5>Contributions Overtime</h5>
+                            <canvas id="myChart"></canvas>
+                        </div>
+                        <div> 
+                            <div class="question">
+                            <h5>How do I compare to my peers?</h5>
+                            <p>These numbers represent current goal achievement</p>
+                            </div>
+                            <div class="compare">
+                            <div class="filter">
+                            <h6>Age: Under 30 <i class="fas fa-caret-down"></i></h6>
+                            <span></span>
+                            <h6>Salary: K 20-K 30 <i class="fas fa-caret-down"></i></h6>
+                            <span></span>
+                            <h6>Gender: Male <i class="fas fa-caret-down"></i></h6>
+                            <span></span>
+                            </div>
+                            <div class="prograss-bars">
+                                <div class="bar">
+                                <div class="circle">
+                                    <div class="circleChart"></div>
+                                    <div class="box"><span></span></div>
+                                </div>
+                                <div class="text">Average</div>
+                                </div>
+                                <div class="bar top">
+                                <div class="circle">
+                                    <div class="circleChart"></div>
+                                    <div class="box"><span></span></div>
+                                </div>
+                                <div class="text">Top</div>
+                                </div>
+                                <div class="bar me">
+                                <div class="circle">
+                                    <div class="circleChart"></div>
+                                    <div class="box"><span></span></div>
+                                </div>
+                                <div class="text">Me</div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="retirement">
+                        <div class="inside">
+                        <h5>Retirement Strategy</h5>
+                        <p>Employee Contribution</p>
+                        <div class="range"> 
+                        <div class="slider1">
+                            <input type="range" min="0" max="100" value="12%">
+                        </div>
+                        <div class="value1">12%</div>
+                        </div>
+                        <p>Retirement Age</p>
+                        <div class="range">
+                        <div class="slider1">
+                        <input type="range" min="0" max="100" value="65">
+                        </div>
+                        <div class="value1">65</div>     
+                        </div>
+                        <span class="line"></span>
+                        <p>Employer Contribution       8.4%</p>
+                        <p>Interest Rate               5% </p>
+                        <button>Update</button><br>
+                        <a>View Help Docs ></a>
+                    </div>
+                    <div class="outside">
+                        <h6>Are you considering a</h6>
+                        <h5>Housing Advance ?</h5>
+                        <p>Limited time reduced interest</p>
+                        <a>Learn More ></a>
+                    </div>
+                    </div>
+                   
+                </div>
+            </div>    
+        </div>
+        <script>
+            var myChart = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(myChart, {
+            type: 'bar',
+            data: {
+                labels: ['20', '25', '30', '35', '40', '60', '65'],
+                datasets: [{
+                    label: 'Employer: K 73,500',
+                    backgroundColor: 'rgb(0, 0, 255)',
+                    data: [20, 50, 110, 170, 250, 290, 300]
+                },
+                {
+                    label: 'Employee: K 52,500',
+                    backgroundColor: 'rgb(74, 74, 208)',
+                    data: [20, 50, 110, 170, 250, 290, 300]
+                },
+                {
+                    label: 'Total Interest: K 244,313',
+                    backgroundColor: 'rgb(168, 168, 226)',
+                    data: [20, 50, 110, 170, 250, 290, 300]
+                }],  //[20, 50, 110, 170, 250, 290, 300]
+            },
+            options: {
+                legend:{
+                    labels :{
+                        boxWidth:15,
+                        fontSize:10,
+                    }
+                },
+                scales:{
+                    yAxes:[{
+                        stacked:true,
+                        ticks:{
+                            suggestedMin: 0,
+                            suggestedMax: 300,
+                            stepSize:300,
+                            callback: function(value, index, values) {
+                        return '$' + value;
+                            }
+                        },
+                    }],
+                    xAxes:[{
+                        stacked:true,
+                    }]
+                }
+            }
+            });
+        </script>
+        <script>
+             let options = {
+                startAngle: -1.35,
+                size:70,
+                value:0.78,
+                fill: {color:"rgb(93, 230, 184)"}
+            }
+            $(".circle .circleChart").circleProgress(options).on('circle-animation-progress',
+            function(event, progress, stepValue){
+                $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%")
+            });
+            $(".top .circleChart").circleProgress({
+                value:0.95,
+            })
+            $(".me .circleChart").circleProgress({
+                value:0.59,
+            })
+        </script>
+    </body>
+</html>
